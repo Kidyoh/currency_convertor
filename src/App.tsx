@@ -30,7 +30,7 @@ function App() {
   };
 
   useEffect(() => {
-    Axios.get<ExchangeRates>(`../exchange_rates.json`)
+    Axios.get<ExchangeRates>(`/exchange_rates.json`)
       .then((res) => {
         setExchangeRates(res.data);
       })

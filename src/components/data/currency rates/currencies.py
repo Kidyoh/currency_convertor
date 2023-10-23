@@ -25,10 +25,11 @@ if status_code == 200:
         "rates": currencies
     }
 
-    # Save the data to a JSON file
-    with open("exchange_rates.json", "w") as json_file:
+    # Save the data to a JSON file in the public folder
+    public_folder_path = "public/exchange_rates.json"  # Replace with the actual path
+    with open(public_folder_path, "w") as json_file:
         json.dump(exchange_rates, json_file, indent=4)
 
-    print("Exchange rates saved to exchange_rates.json")
+    print(f"Exchange rates saved to {public_folder_path}")
 else:
     print(f"Request failed with status code: {status_code}")
