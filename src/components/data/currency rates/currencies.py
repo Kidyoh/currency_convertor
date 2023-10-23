@@ -26,7 +26,7 @@ if status_code == 200:
     }
 
     # Save the data to a JSON file in the public folder
-    public_folder_path = "public/exchange_rates.json"  # Replace with the actual path
+    public_folder_path = "public/exchange_rates.json"  
     with open(public_folder_path, "w") as json_file:
         json.dump(exchange_rates, json_file, indent=4)
 
